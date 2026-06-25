@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>글로벌로지스 | 국제물류주선 전문기업</title>
+  <meta name="description" content="해상·항공 운송, 통관, 내륙운송까지 — 전 세계를 연결하는 국제물류주선(포워딩) 전문기업 글로벌로지스(GlobalLogis)." />
+  <meta name="keywords" content="국제물류, 포워딩, 해상운송, 항공운송, 통관, 포워더, 국제물류주선업, 물류대행" />
+  <meta property="og:title" content="글로벌로지스 | 국제물류주선 전문기업" />
+  <meta property="og:description" content="전 세계 120개국 네트워크로 연결하는 통합 물류 솔루션." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#0a2540', 700: '#0e3a66', 600: '#114a85' },
+            brand: { DEFAULT: '#1565d8', dark: '#0f54bd', light: '#4a90e2' },
+            accent: { DEFAULT: '#00c2a8', light: '#8fe6d8' },
+            ink: '#16202c',
+            muted: '#5b6b7c',
+            line: '#e3e9f0',
+            soft: '#f5f8fc',
+          },
+          fontFamily: {
+            sans: ['"Noto Sans KR"', 'system-ui', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(10,37,64,0.08)',
+            lg2: '0 24px 60px rgba(10,37,64,0.14)',
+            brand: '0 8px 24px rgba(21,101,216,0.35)',
+          },
+          maxWidth: { container: '1180px' },
+          keyframes: {
+            pulse2: {
+              '0%': { boxShadow: '0 0 0 0 rgba(0,194,168,0.5)' },
+              '70%': { boxShadow: '0 0 0 16px rgba(0,194,168,0)' },
+              '100%': { boxShadow: '0 0 0 0 rgba(0,194,168,0)' },
+            },
+          },
+          animation: { pulse2: 'pulse2 2.4s infinite' },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwind">
+    @layer utilities {
+      .container-x { @apply w-full max-w-container mx-auto px-6; }
+      .eyebrow { @apply font-display tracking-[0.2em] text-xs font-semibold; }
+      .reveal { @apply opacity-0 translate-y-7 transition-all duration-700 ease-out; }
+      .reveal.in { @apply opacity-100 translate-y-0; }
+    }
+    .hero-grid::after {
+      content: ""; position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      -webkit-mask-image: radial-gradient(1000px 600px at 70% 30%, #000, transparent 75%);
+      mask-image: radial-gradient(1000px 600px at 70% 30%, #000, transparent 75%);
+    }
+    .text-gradient {
+      background: linear-gradient(100deg, #fff 0%, #8fe6d8 60%, #00c2a8 100%);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="font-sans text-ink antialiased">
+
+  <!-- ===== Header ===== -->
+  <header id="header" class="fixed top-0 inset-x-0 z-50 py-4 transition-all duration-300">
+    <div class="container-x flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-2.5 text-white transition-colors" data-logo>
+        <span class="text-accent">
+          <svg viewBox="0 0 32 32" width="28" height="28"><path d="M2 22h28M6 22V11l7-4 7 4v11M13 22v-6h4v6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="9" r="3" fill="currentColor"/></svg>
+        </span>
+        <span class="font-display text-2xl font-semibold">Global<strong class="font-extrabold">Logis</strong></span>
+      </a>
+
+      <nav id="nav" class="hidden md:flex items-center gap-8" aria-label="주요 메뉴">
+        <a href="#about" class="text-sm font-medium text-white/90 hover:text-white transition" data-navlink>회사소개</a>
+        <a href="#services" class="text-sm font-medium text-white/90 hover:text-white transition" data-navlink>서비스</a>
+        <a href="#why" class="text-sm font-medium text-white/90 hover:text-white transition" data-navlink>강점</a>
+        <a href="#process" class="text-sm font-medium text-white/90 hover:text-white transition" data-navlink>운송절차</a>
+        <a href="#network" class="text-sm font-medium text-white/90 hover:text-white transition" data-navlink>네트워크</a>
+        <a href="#contact" class="rounded-full bg-accent px-5 py-2.5 text-sm font-bold text-navy hover:bg-[#00d6ba] transition">견적 문의</a>
+      </nav>
+
+      <button id="navToggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="메뉴 열기" aria-expanded="false">
+        <span class="block h-0.5 w-6 rounded bg-white transition" data-bar></span>
+        <span class="block h-0.5 w-6 rounded bg-white transition" data-bar></span>
+        <span class="block h-0.5 w-6 rounded bg-white transition" data-bar></span>
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div id="mobileNav" class="md:hidden fixed inset-y-0 right-0 w-[78vw] max-w-xs translate-x-full bg-white shadow-2xl transition-transform duration-300 ease-out pt-24 px-7">
+      <a href="#about" class="block border-b border-line py-3 font-medium text-navy" data-mlink>회사소개</a>
+      <a href="#services" class="block border-b border-line py-3 font-medium text-navy" data-mlink>서비스</a>
+      <a href="#why" class="block border-b border-line py-3 font-medium text-navy" data-mlink>강점</a>
+      <a href="#process" class="block border-b border-line py-3 font-medium text-navy" data-mlink>운송절차</a>
+      <a href="#network" class="block border-b border-line py-3 font-medium text-navy" data-mlink>네트워크</a>
+      <a href="#contact" class="mt-4 block rounded-full bg-brand py-3 text-center font-bold text-white" data-mlink>견적 문의</a>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section id="home" class="relative overflow-hidden bg-navy text-white pt-44 pb-24">
+    <div class="hero-grid absolute inset-0 -z-0"
+         style="background:
+           radial-gradient(1200px 600px at 80% -10%, rgba(0,194,168,0.25), transparent 60%),
+           radial-gradient(900px 500px at 10% 20%, rgba(74,144,226,0.25), transparent 55%),
+           linear-gradient(135deg, #0a2540 0%, #0e3a66 60%, #114a85 100%);"></div>
+
+    <div class="container-x relative z-10 max-w-3xl">
+      <p class="eyebrow text-accent mb-5">INTERNATIONAL FREIGHT FORWARDING</p>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.12] tracking-tight">
+        전 세계를 잇는<br />
+        <span class="text-gradient">신뢰의 물류 파트너</span>
+      </h1>
+      <p class="mt-6 text-base sm:text-lg text-white/85">
+        해상·항공 운송부터 통관, 내륙운송, 보세창고까지.<br class="hidden sm:block" />
+        글로벌로지스가 복잡한 국제물류를 하나의 솔루션으로 책임집니다.
+      </p>
+      <div class="mt-9 flex flex-wrap gap-3.5">
+        <a href="#contact" class="rounded-full bg-brand px-7 py-3.5 font-bold text-white shadow-brand hover:bg-brand-dark hover:-translate-y-0.5 transition">무료 견적 받기</a>
+        <a href="#services" class="rounded-full border-[1.5px] border-white/35 bg-white/10 px-7 py-3.5 font-bold text-white hover:bg-white/20 hover:-translate-y-0.5 transition">서비스 살펴보기</a>
+      </div>
+
+      <ul class="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-5 border-t border-white/15 pt-10">
+        <li class="flex flex-col">
+          <strong class="font-display text-3xl sm:text-4xl font-extrabold leading-none" data-count="120">0</strong>
+          <span class="mt-2 text-sm text-white/70">운영 국가</span>
+        </li>
+        <li class="flex flex-col">
+          <strong class="font-display text-3xl sm:text-4xl font-extrabold leading-none" data-count="35">0</strong>
+          <span class="mt-2 text-sm text-white/70">년 업력</span>
+        </li>
+        <li class="flex flex-col">
+          <strong class="font-display text-3xl sm:text-4xl font-extrabold leading-none" data-count="98">0</strong>
+          <span class="mt-2 text-sm text-white/70">정시 운송률 (%)</span>
+        </li>
+        <li class="flex flex-col">
+          <strong class="font-display text-3xl sm:text-4xl font-extrabold leading-none" data-count="4500">0</strong>
+          <span class="mt-2 text-sm text-white/70">연간 처리 건수</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Trust bar ===== -->
+  <div class="border-b border-line bg-soft">
+    <div class="container-x flex flex-wrap items-center gap-x-9 gap-y-3 py-5">
+      <span class="whitespace-nowrap text-sm font-semibold text-muted">함께하는 파트너</span>
+      <div class="flex flex-wrap gap-8">
+        <span class="font-display font-extrabold tracking-wide text-[#9aabbd] hover:text-navy transition">MAERSK</span>
+        <span class="font-display font-extrabold tracking-wide text-[#9aabbd] hover:text-navy transition">MSC</span>
+        <span class="font-display font-extrabold tracking-wide text-[#9aabbd] hover:text-navy transition">CMA CGM</span>
+        <span class="font-display font-extrabold tracking-wide text-[#9aabbd] hover:text-navy transition">HMM</span>
+        <span class="font-display font-extrabold tracking-wide text-[#9aabbd] hover:text-navy transition">Korean Air Cargo</span>
+        <span class="font-display font-extrabold tracking-wide text-[#9aabbd] hover:text-navy transition">DHL</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== About ===== -->
+  <section id="about" class="py-24">
+    <div class="container-x grid items-center gap-16 lg:grid-cols-[0.85fr_1.15fr]">
+      <div class="reveal relative">
+        <div class="relative flex min-h-[320px] flex-col justify-between overflow-hidden rounded-2xl bg-gradient-to-b from-navy to-navy-700 p-10 text-white shadow-lg2">
+          <span class="pointer-events-none absolute -bottom-5 -right-2.5 text-9xl opacity-[0.08]">⚓</span>
+          <p class="font-display font-semibold tracking-[0.1em] text-accent">Since 1990</p>
+          <p class="text-3xl font-black leading-snug">한 건의 화물도<br />내 것처럼.</p>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow text-brand mb-3.5">ABOUT US</p>
+        <h2 class="text-3xl sm:text-4xl font-black leading-tight tracking-tight">35년 노하우의<br />국제물류주선 전문기업</h2>
+        <p class="mt-4 text-lg text-muted">
+          글로벌로지스는 1990년 설립 이래, 수출입 화주의 입장에서 가장 효율적인 운송 경로와
+          비용 구조를 설계해 온 종합 물류주선(포워딩) 기업입니다.
+        </p>
+        <p class="mt-4 text-muted">
+          전 세계 120개국, 300여 개 파트너 네트워크를 기반으로 해상·항공 운송, 통관, 내륙운송,
+          창고·보관에 이르는 전 과정을 단일 창구에서 관리합니다.
+        </p>
+        <ul class="mt-7 grid gap-3.5">
+          <li class="relative pl-9 font-medium">
+            <span class="absolute left-0 top-0.5 grid h-[22px] w-[22px] place-items-center rounded-full bg-accent text-xs font-bold text-white">✓</span>
+            국제물류주선업 등록 / 관세청 통관 전문 보유
+          </li>
+          <li class="relative pl-9 font-medium">
+            <span class="absolute left-0 top-0.5 grid h-[22px] w-[22px] place-items-center rounded-full bg-accent text-xs font-bold text-white">✓</span>
+            전담 매니저 1:1 배정 및 실시간 화물 추적
+          </li>
+          <li class="relative pl-9 font-medium">
+            <span class="absolute left-0 top-0.5 grid h-[22px] w-[22px] place-items-center rounded-full bg-accent text-xs font-bold text-white">✓</span>
+            특수·위험물·프로젝트 화물 운송 경험 다수
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Services ===== -->
+  <section id="services" class="bg-soft py-24">
+    <div class="container-x">
+      <div class="reveal mx-auto mb-14 max-w-2xl text-center">
+        <p class="eyebrow text-brand mb-3.5">OUR SERVICES</p>
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight">통합 물류 서비스</h2>
+        <p class="mt-4 text-lg text-muted">화주가 필요로 하는 모든 물류 기능을 하나의 파이프라인으로 제공합니다.</p>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- card -->
+        <article class="reveal group rounded-2xl border border-line bg-white p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-transparent hover:shadow-lg2">
+          <div class="mb-5 grid h-14 w-14 place-items-center rounded-xl bg-gradient-to-br from-[#e8f0fe] to-[#d6fff7] text-2xl">🚢</div>
+          <h3 class="mb-2.5 text-xl font-bold">해상운송 (Ocean)</h3>
+          <p class="text-muted">FCL·LCL 전 구간 운송. 주요 항로 안정적 선복 확보로 최적 운임과 스케줄을 제안합니다.</p>
+        </article>
+        <article class="reveal group rounded-2xl border border-line bg-white p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-transparent hover:shadow-lg2">
+          <div class="mb-5 grid h-14 w-14 place-items-center rounded-xl bg-gradient-to-br from-[#e8f0fe] to-[#d6fff7] text-2xl">✈️</div>
+          <h3 class="mb-2.5 text-xl font-bold">항공운송 (Air)</h3>
+          <p class="text-muted">긴급·고가 화물을 위한 신속 항공 운송. 주요 항공사 파트너십으로 안정적 공간을 확보합니다.</p>
+        </article>
+        <article class="reveal group rounded-2xl border border-line bg-white p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-transparent hover:shadow-lg2">
+          <div class="mb-5 grid h-14 w-14 place-items-center rounded-xl bg-gradient-to-br from-[#e8f0fe] to-[#d6fff7] text-2xl">📋</div>
+          <h3 class="mb-2.5 text-xl font-bold">수출입 통관</h3>
+          <p class="text-muted">관세사 협업을 통한 정확한 HS코드 분류와 신속 통관으로 리드타임을 단축합니다.</p>
+        </article>
+        <article class="reveal group rounded-2xl border border-line bg-white p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-transparent hover:shadow-lg2">
+          <div class="mb-5 grid h-14 w-14 place-items-center rounded-xl bg-gradient-to-br from-[#e8f0fe] to-[#d6fff7] text-2xl">🚚</div>
+          <h3 class="mb-2.5 text-xl font-bold">내륙운송 / 드레이지</h3>
+          <p class="text-muted">항만·공항에서 문전까지. 컨테이너 트럭·벌크 차량을 활용한 전국 내륙운송을 책임집니다.</p>
+        </article>
+        <article class="reveal group rounded-2xl border border-line bg-white p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-transparent hover:shadow-lg2">
+          <div class="mb-5 grid h-14 w-14 place-items-center rounded-xl bg-gradient-to-br from-[#e8f0fe] to-[#d6fff7] text-2xl">🏬</div>
+          <h3 class="mb-2.5 text-xl font-bold">창고 / 보관 / 보세</h3>
+          <p class="text-muted">보세창고 및 일반창고 보관, 재포장·라벨링·검수 등 부가 물류 서비스를 제공합니다.</p>
+        </article>
+        <article class="reveal group rounded-2xl border border-line bg-white p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-transparent hover:shadow-lg2">
+          <div class="mb-5 grid h-14 w-14 place-items-center rounded-xl bg-gradient-to-br from-[#e8f0fe] to-[#d6fff7] text-2xl">📦</div>
+          <h3 class="mb-2.5 text-xl font-bold">프로젝트 / 특수화물</h3>
+          <p class="text-muted">중량물·플랜트·위험물 등 일반 운송이 어려운 특수 화물의 맞춤 운송 솔루션을 설계합니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why ===== -->
+  <section id="why" class="relative overflow-hidden bg-gradient-to-b from-navy to-navy-700 py-24">
+    <div class="pointer-events-none absolute -right-32 -top-32 h-[420px] w-[420px] rounded-full"
+         style="background: radial-gradient(circle, rgba(0,194,168,0.3), transparent 70%);"></div>
+    <div class="container-x relative">
+      <div class="reveal mx-auto mb-14 max-w-2xl text-center">
+        <p class="eyebrow text-accent mb-3.5">WHY GLOBALLOGIS</p>
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white">왜 글로벌로지스인가</h2>
+      </div>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="reveal rounded-2xl border border-white/10 bg-white/5 p-7 transition hover:-translate-y-1 hover:bg-white/10">
+          <span class="font-display text-3xl font-extrabold text-accent">01</span>
+          <h3 class="my-3.5 text-xl font-bold text-white">투명한 비용 구조</h3>
+          <p class="text-white/70">숨은 비용 없는 명확한 견적서. 운임·부대비용을 항목별로 투명하게 안내합니다.</p>
+        </div>
+        <div class="reveal rounded-2xl border border-white/10 bg-white/5 p-7 transition hover:-translate-y-1 hover:bg-white/10">
+          <span class="font-display text-3xl font-extrabold text-accent">02</span>
+          <h3 class="my-3.5 text-xl font-bold text-white">실시간 가시성</h3>
+          <p class="text-white/70">화물의 위치와 상태를 실시간으로 공유하여 언제든 진행 상황을 확인할 수 있습니다.</p>
+        </div>
+        <div class="reveal rounded-2xl border border-white/10 bg-white/5 p-7 transition hover:-translate-y-1 hover:bg-white/10">
+          <span class="font-display text-3xl font-extrabold text-accent">03</span>
+          <h3 class="my-3.5 text-xl font-bold text-white">글로벌 네트워크</h3>
+          <p class="text-white/70">120개국 현지 파트너망으로 어떤 목적지든 안정적인 도어-투-도어 운송이 가능합니다.</p>
+        </div>
+        <div class="reveal rounded-2xl border border-white/10 bg-white/5 p-7 transition hover:-translate-y-1 hover:bg-white/10">
+          <span class="font-display text-3xl font-extrabold text-accent">04</span>
+          <h3 class="my-3.5 text-xl font-bold text-white">전담 매니저</h3>
+          <p class="text-white/70">건별 전담 매니저가 1:1로 배정되어 신속한 의사결정과 문제 해결을 지원합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Process ===== -->
+  <section id="process" class="py-24">
+    <div class="container-x">
+      <div class="reveal mx-auto mb-14 max-w-2xl text-center">
+        <p class="eyebrow text-brand mb-3.5">HOW IT WORKS</p>
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight">간단한 운송 절차</h2>
+        <p class="mt-4 text-lg text-muted">문의부터 인도까지, 단 5단계로 끝나는 글로벌로지스의 물류 프로세스.</p>
+      </div>
+      <ol class="grid gap-y-10 gap-x-5 sm:grid-cols-2 lg:grid-cols-5">
+        <li class="reveal text-center">
+          <span class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full border-2 border-brand bg-white font-display text-2xl font-extrabold text-brand shadow-soft">1</span>
+          <h3 class="mb-2 text-lg font-bold">견적 문의</h3>
+          <p class="text-sm text-muted">화물 정보와 출발·도착지를 알려주시면 최적 운송안을 제안드립니다.</p>
+        </li>
+        <li class="reveal text-center">
+          <span class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full border-2 border-brand bg-white font-display text-2xl font-extrabold text-brand shadow-soft">2</span>
+          <h3 class="mb-2 text-lg font-bold">운송 설계</h3>
+          <p class="text-sm text-muted">해상·항공·복합 운송 중 가장 효율적인 경로와 스케줄을 확정합니다.</p>
+        </li>
+        <li class="reveal text-center">
+          <span class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full border-2 border-brand bg-white font-display text-2xl font-extrabold text-brand shadow-soft">3</span>
+          <h3 class="mb-2 text-lg font-bold">픽업 / 선적</h3>
+          <p class="text-sm text-muted">출발지 픽업, 통관, 선적까지 전담 매니저가 일괄 처리합니다.</p>
+        </li>
+        <li class="reveal text-center">
+          <span class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full border-2 border-brand bg-white font-display text-2xl font-extrabold text-brand shadow-soft">4</span>
+          <h3 class="mb-2 text-lg font-bold">운송 / 추적</h3>
+          <p class="text-sm text-muted">운송 전 구간 실시간 추적과 상태 알림을 제공합니다.</p>
+        </li>
+        <li class="reveal text-center">
+          <span class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full border-2 border-brand bg-white font-display text-2xl font-extrabold text-brand shadow-soft">5</span>
+          <h3 class="mb-2 text-lg font-bold">도착 / 인도</h3>
+          <p class="text-sm text-muted">도착지 통관 후 최종 목적지까지 안전하게 인도합니다.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== Network ===== -->
+  <section id="network" class="bg-soft py-24">
+    <div class="container-x grid items-center gap-14 lg:grid-cols-2">
+      <div class="reveal">
+        <p class="eyebrow text-brand mb-3.5">GLOBAL NETWORK</p>
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight">전 세계를 연결합니다</h2>
+        <p class="mt-4 text-lg text-muted">
+          아시아, 미주, 유럽, 중동을 잇는 핵심 항로를 운영하며,
+          현지 파트너와의 긴밀한 협업으로 어디든 닿습니다.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-10">
+          <div><strong class="block font-display text-3xl font-extrabold text-brand">120+</strong><span class="text-sm text-muted">운영 국가</span></div>
+          <div><strong class="block font-display text-3xl font-extrabold text-brand">300+</strong><span class="text-sm text-muted">현지 파트너</span></div>
+          <div><strong class="block font-display text-3xl font-extrabold text-brand">50+</strong><span class="text-sm text-muted">주요 항만·공항</span></div>
+        </div>
+      </div>
+      <div class="reveal relative aspect-[10/7] overflow-hidden rounded-2xl bg-gradient-to-b from-navy to-navy-700 shadow-lg2">
+        <div class="absolute inset-0 opacity-50" style="background-image: radial-gradient(rgba(255,255,255,0.12) 1.2px, transparent 1.2px); background-size: 18px 18px;"></div>
+        <span class="absolute h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent animate-pulse2" style="left:18%; top:38%"></span>
+        <span class="absolute h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent animate-pulse2" style="left:30%; top:55%"></span>
+        <span class="absolute h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent animate-pulse2" style="left:48%; top:30%"></span>
+        <span class="absolute h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent animate-pulse2" style="left:62%; top:48%"></span>
+        <span class="absolute h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent animate-pulse2" style="left:78%; top:40%"></span>
+        <span class="absolute h-[18px] w-[18px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white animate-pulse2" style="left:80%; top:52%"></span>
+        <svg class="absolute inset-0 h-full w-full" viewBox="0 0 100 70" preserveAspectRatio="none">
+          <path d="M80 52 Q 50 10 18 38" fill="none" stroke="rgba(0,194,168,0.55)" stroke-width="0.5" stroke-dasharray="4 3"/>
+          <path d="M80 52 Q 60 20 48 30" fill="none" stroke="rgba(0,194,168,0.55)" stroke-width="0.5" stroke-dasharray="4 3"/>
+          <path d="M80 52 Q 70 70 62 48" fill="none" stroke="rgba(0,194,168,0.55)" stroke-width="0.5" stroke-dasharray="4 3"/>
+          <path d="M80 52 Q 84 30 78 40" fill="none" stroke="rgba(0,194,168,0.55)" stroke-width="0.5" stroke-dasharray="4 3"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="bg-gradient-to-b from-navy-700 to-navy py-24">
+    <div class="container-x grid items-start gap-14 lg:grid-cols-[1fr_1.1fr]">
+      <div class="reveal">
+        <p class="eyebrow text-accent mb-3.5">GET A QUOTE</p>
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white">화물 운송, 지금 문의하세요</h2>
+        <p class="mt-4 text-lg text-white/80">
+          출발지·도착지와 화물 정보를 남겨주시면 영업일 기준 24시간 이내에
+          전담 매니저가 맞춤 견적으로 연락드립니다.
+        </p>
+        <ul class="mt-8 grid gap-4 text-white/90">
+          <li><span class="inline-block w-20 text-sm font-bold text-accent">전화</span> 02-1234-5678</li>
+          <li><span class="inline-block w-20 text-sm font-bold text-accent">이메일</span> sales@globallogis.co.kr</li>
+          <li><span class="inline-block w-20 align-top text-sm font-bold text-accent">주소</span> 서울특별시 중구 세종대로 110, 글로벌로지스빌딩</li>
+          <li><span class="inline-block w-20 text-sm font-bold text-accent">운영시간</span> 평일 09:00 ~ 18:00</li>
+        </ul>
+      </div>
+
+      <form id="quoteForm" class="reveal grid gap-4 rounded-2xl bg-white p-7 sm:p-9 shadow-lg2" novalidate>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <label class="grid gap-1.5 text-sm font-semibold">이름 / 회사명
+            <input type="text" name="name" placeholder="홍길동 / (주)무역상사" required
+              class="w-full rounded-lg border-[1.5px] border-line bg-soft px-3.5 py-3 text-[0.95rem] font-normal text-ink transition focus:border-brand focus:bg-white focus:outline-none focus:ring-[3px] focus:ring-brand/10" />
+          </label>
+          <label class="grid gap-1.5 text-sm font-semibold">연락처
+            <input type="tel" name="phone" placeholder="010-0000-0000" required
+              class="w-full rounded-lg border-[1.5px] border-line bg-soft px-3.5 py-3 text-[0.95rem] font-normal text-ink transition focus:border-brand focus:bg-white focus:outline-none focus:ring-[3px] focus:ring-brand/10" />
+          </label>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <label class="grid gap-1.5 text-sm font-semibold">이메일
+            <input type="email" name="email" placeholder="you@company.com" required
+              class="w-full rounded-lg border-[1.5px] border-line bg-soft px-3.5 py-3 text-[0.95rem] font-normal text-ink transition focus:border-brand focus:bg-white focus:outline-none focus:ring-[3px] focus:ring-brand/10" />
+          </label>
+          <label class="grid gap-1.5 text-sm font-semibold">운송 유형
+            <select name="type"
+              class="w-full rounded-lg border-[1.5px] border-line bg-soft px-3.5 py-3 text-[0.95rem] font-normal text-ink transition focus:border-brand focus:bg-white focus:outline-none focus:ring-[3px] focus:ring-brand/10">
+              <option value="">선택해주세요</option>
+              <option>해상운송 (FCL)</option>
+              <option>해상운송 (LCL)</option>
+              <option>항공운송</option>
+              <option>통관 / 내륙운송</option>
+              <option>기타 / 특수화물</option>
+            </select>
+          </label>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <label class="grid gap-1.5 text-sm font-semibold">출발지
+            <input type="text" name="from" placeholder="예: 부산항 (KRPUS)"
+              class="w-full rounded-lg border-[1.5px] border-line bg-soft px-3.5 py-3 text-[0.95rem] font-normal text-ink transition focus:border-brand focus:bg-white focus:outline-none focus:ring-[3px] focus:ring-brand/10" />
+          </label>
+          <label class="grid gap-1.5 text-sm font-semibold">도착지
+            <input type="text" name="to" placeholder="예: 로스앤젤레스 (USLAX)"
+              class="w-full rounded-lg border-[1.5px] border-line bg-soft px-3.5 py-3 text-[0.95rem] font-normal text-ink transition focus:border-brand focus:bg-white focus:outline-none focus:ring-[3px] focus:ring-brand/10" />
+          </label>
+        </div>
+        <label class="grid gap-1.5 text-sm font-semibold">화물 정보 / 문의 내용
+          <textarea name="message" rows="4" placeholder="품목, 중량, 부피, 희망 일정 등을 적어주세요."
+            class="w-full resize-y rounded-lg border-[1.5px] border-line bg-soft px-3.5 py-3 text-[0.95rem] font-normal text-ink transition focus:border-brand focus:bg-white focus:outline-none focus:ring-[3px] focus:ring-brand/10"></textarea>
+        </label>
+        <button type="submit" class="w-full rounded-full bg-brand px-7 py-3.5 font-bold text-white shadow-brand transition hover:bg-brand-dark hover:-translate-y-0.5">견적 요청 보내기</button>
+        <p id="formNote" class="min-h-[1.2em] text-center text-sm font-semibold" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="bg-[#061a2e] text-white/75">
+    <div class="container-x grid gap-12 py-16 lg:grid-cols-[1.3fr_2fr]">
+      <div>
+        <a href="#home" class="flex items-center gap-2.5 text-white">
+          <span class="font-display text-2xl font-semibold">Global<strong class="font-extrabold">Logis</strong></span>
+        </a>
+        <p class="mt-4 max-w-[280px] text-sm">전 세계를 잇는 신뢰의 국제물류주선 파트너.</p>
+      </div>
+      <div class="grid gap-8 sm:grid-cols-3">
+        <div>
+          <h4 class="mb-4 font-bold text-white">서비스</h4>
+          <a href="#services" class="mb-2.5 block text-sm text-white/70 hover:text-accent transition">해상운송</a>
+          <a href="#services" class="mb-2.5 block text-sm text-white/70 hover:text-accent transition">항공운송</a>
+          <a href="#services" class="mb-2.5 block text-sm text-white/70 hover:text-accent transition">통관 / 내륙운송</a>
+          <a href="#services" class="mb-2.5 block text-sm text-white/70 hover:text-accent transition">창고 / 보관</a>
+        </div>
+        <div>
+          <h4 class="mb-4 font-bold text-white">회사</h4>
+          <a href="#about" class="mb-2.5 block text-sm text-white/70 hover:text-accent transition">회사소개</a>
+          <a href="#why" class="mb-2.5 block text-sm text-white/70 hover:text-accent transition">강점</a>
+          <a href="#network" class="mb-2.5 block text-sm text-white/70 hover:text-accent transition">글로벌 네트워크</a>
+          <a href="#contact" class="mb-2.5 block text-sm text-white/70 hover:text-accent transition">문의하기</a>
+        </div>
+        <div>
+          <h4 class="mb-4 font-bold text-white">연락처</h4>
+          <a href="tel:0212345678" class="mb-2.5 block text-sm text-white/70 hover:text-accent transition">02-1234-5678</a>
+          <a href="mailto:sales@globallogis.co.kr" class="mb-2.5 block text-sm text-white/70 hover:text-accent transition">sales@globallogis.co.kr</a>
+          <span class="mb-2.5 block text-sm text-white/70">서울특별시 중구 세종대로 110</span>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="container-x">
+        <p class="py-6 text-center text-sm text-white/50">© 2026 GlobalLogis Co., Ltd. 국제물류주선업 등록 제0000호. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
